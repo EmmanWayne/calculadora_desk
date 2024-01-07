@@ -51,23 +51,23 @@ public class ventana_calculadora extends JFrame {
 		final ImageIcon n9n = new ImageIcon(getClass().getResource("/recursos/9_tn.png"));
 		final ImageIcon n0n = new ImageIcon(getClass().getResource("/recursos/0_tn.png"));
 		// Iconos de botones de funcion del tema blanco
-		final ImageIcon n1n = new ImageIcon(getClass().getResource("/recursos/borrar_b.png"));
-		final ImageIcon n2n = new ImageIcon(getClass().getResource("/recursos/eliminar_b.png"));
-		final ImageIcon n3n = new ImageIcon(getClass().getResource("/recursos/sumar_b.png"));
-		final ImageIcon n4n = new ImageIcon(getClass().getResource("/recursos/restar_b.png"));
-		final ImageIcon n5n = new ImageIcon(getClass().getResource("/recursos/multiplicar_b.png"));
-		final ImageIcon n6n = new ImageIcon(getClass().getResource("/recursos/dividir_b.png"));
-		final ImageIcon n7n = new ImageIcon(getClass().getResource("/recursos/punto_b.png"));
-		final ImageIcon n8n = new ImageIcon(getClass().getResource("/recursos/tema_b.png"));
+		final ImageIcon borrar_b = new ImageIcon(getClass().getResource("/recursos/borrar_b.png"));
+		final ImageIcon eliminar_b = new ImageIcon(getClass().getResource("/recursos/eliminar_b.png"));
+		final ImageIcon suma_b = new ImageIcon(getClass().getResource("/recursos/sumar_b.png"));
+		final ImageIcon resta_b = new ImageIcon(getClass().getResource("/recursos/restar_b.png"));
+		final ImageIcon multi_b = new ImageIcon(getClass().getResource("/recursos/multiplicar_b.png"));
+		final ImageIcon divi_b = new ImageIcon(getClass().getResource("/recursos/dividir_b.png"));
+		final ImageIcon punto_b = new ImageIcon(getClass().getResource("/recursos/punto_b.png"));
+		final ImageIcon tema_b = new ImageIcon(getClass().getResource("/recursos/tema_b.png"));
 		// Iconos de botones de funcion del tema blanco
-		final ImageIcon n1n = new ImageIcon(getClass().getResource("/recursos/borrar_n.png"));
-		final ImageIcon n2n = new ImageIcon(getClass().getResource("/recursos/eliminar_n.png"));
-		final ImageIcon n3n = new ImageIcon(getClass().getResource("/recursos/sumar_n.png"));
-		final ImageIcon n4n = new ImageIcon(getClass().getResource("/recursos/restar_n.png"));
-		final ImageIcon n5n = new ImageIcon(getClass().getResource("/recursos/multiplicar_n.png"));
-		final ImageIcon n6n = new ImageIcon(getClass().getResource("/recursos/dividir_n.png"));
-		final ImageIcon n7n = new ImageIcon(getClass().getResource("/recursos/punto_n.png"));
-		final ImageIcon n8n = new ImageIcon(getClass().getResource("/recursos/tema_n.png"));
+		final ImageIcon borrar_n = new ImageIcon(getClass().getResource("/recursos/borrar_n.png"));
+		final ImageIcon eliminar_n = new ImageIcon(getClass().getResource("/recursos/eliminar_n.png"));
+		final ImageIcon suma_n = new ImageIcon(getClass().getResource("/recursos/sumar_n.png"));
+		final ImageIcon resta_n = new ImageIcon(getClass().getResource("/recursos/restar_n.png"));
+		final ImageIcon multi_n = new ImageIcon(getClass().getResource("/recursos/multiplicar_n.png"));
+		final ImageIcon divi_n = new ImageIcon(getClass().getResource("/recursos/dividir_n.png"));
+		final ImageIcon punto_n = new ImageIcon(getClass().getResource("/recursos/punto_n.png"));
+		final ImageIcon tema_n = new ImageIcon(getClass().getResource("/recursos/tema_n.png"));
 
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
