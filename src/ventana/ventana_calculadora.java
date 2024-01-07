@@ -42,6 +42,7 @@ public class ventana_calculadora extends JFrame {
 	private JLabel lbln8_1;
 	private JLabel lbln9_1;
 	private JLabel lblResta_1;
+	private JLabel lblPunto_1;
 	
 
 	public ventana_calculadora() {
@@ -238,6 +239,14 @@ public class ventana_calculadora extends JFrame {
 		final ImageIcon multiplicar = new ImageIcon(
 				multi_b.getImage().getScaledInstance(lblMultiplicacion.getWidth(), lblMultiplicacion.getHeight(), Image.SCALE_DEFAULT));
 		lblMultiplicacion.setIcon(multiplicar);
+		
+		lblEliminar = new JLabel("");
+		lblEliminar.setHorizontalAlignment(SwingConstants.CENTER);
+		lblEliminar.setBounds(134, 11, 52, 46);
+		panelBotones.add(lblEliminar);
+		final ImageIcon eliminar = new ImageIcon(
+				eliminar_b.getImage().getScaledInstance(lblEliminar.getWidth(), lblEliminar.getHeight(), Image.SCALE_DEFAULT));
+		lblEliminar.setIcon(eliminar);
 	}
 
 	public static void main(String[] args) {
