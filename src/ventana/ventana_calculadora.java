@@ -18,6 +18,7 @@ import javax.swing.UIManager;
 import java.awt.Color;
 import javax.swing.border.LineBorder;
 import javax.swing.JButton;
+import javax.swing.border.BevelBorder;
 
 public class ventana_calculadora extends JFrame {
 
@@ -94,8 +95,6 @@ public class ventana_calculadora extends JFrame {
 		final ImageIcon divi_n = new ImageIcon(getClass().getResource("/recursos/dividir_n.png"));
 		final ImageIcon punto_n = new ImageIcon(getClass().getResource("/recursos/punto_n.png"));
 		final ImageIcon tema_n = new ImageIcon(getClass().getResource("/recursos/tema_n.png"));
-		
-		BordeRedondo border = new BordeRedondo(10);
 
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -117,7 +116,7 @@ public class ventana_calculadora extends JFrame {
 		txtPantalla.setAlignmentY(BOTTOM_ALIGNMENT);
 
 		JPanel panel_principal = new JPanel();
-		panel_principal.setBorder(new LineBorder(new Color(255, 140, 0), 3, true));
+		panel_principal.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
 		panel_principal.setBounds(10, 71, 264, 370);
 		contentPane.add(panel_principal);
 		panel_principal.setLayout(null);
@@ -286,10 +285,11 @@ public class ventana_calculadora extends JFrame {
 		lblBorrar.setIcon(borrar);
 		
 		JButton btnCalcular = new JButton("Calcular");
+		btnCalcular.setVerticalAlignment(SwingConstants.TOP);
 		btnCalcular.setBackground(new Color(255, 140, 0));
 		btnCalcular.setFont(new Font("Consolas", Font.BOLD, 30));
 		btnCalcular.setBounds(10, 452, 264, 39);
-		btnCalcular.setBorder(border);
+		btnCalcular.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
 		contentPane.add(btnCalcular);
 	}
 
