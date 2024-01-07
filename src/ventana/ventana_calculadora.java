@@ -16,6 +16,7 @@ public class ventana_calculadora extends JFrame {
 	private JTextField textField;
 
 	public ventana_calculadora() {
+		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 300, 463);
 		contentPane = new JPanel();
