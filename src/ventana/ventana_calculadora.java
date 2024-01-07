@@ -9,6 +9,7 @@ import javax.swing.JTextField;
 import java.awt.Font;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
+import java.awt.Toolkit;
 
 public class ventana_calculadora extends JFrame {
 
@@ -16,6 +17,7 @@ public class ventana_calculadora extends JFrame {
 	private JTextField textField;
 
 	public ventana_calculadora() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(ventana_calculadora.class.getResource("/recursos/calculadora.png")));
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 300, 463);
