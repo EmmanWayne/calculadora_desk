@@ -24,7 +24,6 @@ public class ventana_calculadora2 extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField txtPantalla;
-	private JLabel lblTema;
 	private JLabel lbligual;
 	private JLabel lbln7_1;
 	private JLabel lbln8_1;
@@ -112,14 +111,6 @@ public class ventana_calculadora2 extends JFrame {
 		panel_opciones.setBorder(new LineBorder(new Color(255, 140, 0), 2, true));
 		panel_opciones.setBounds(10, 11, 267, 60);
 		panel_principal.add(panel_opciones);
-
-		lblTema = new JLabel("");
-		lblTema.setBounds(10, 11, 43, 38);
-		panel_opciones.add(lblTema);
-		lblTema.setHorizontalAlignment(SwingConstants.CENTER);
-		final ImageIcon tema = new ImageIcon(
-				tema_b.getImage().getScaledInstance(lblTema.getWidth(), lblTema.getHeight(), Image.SCALE_DEFAULT));
-		lblTema.setIcon(tema);
 		
 		JLabel lblTema_1 = new JLabel("");
 		lblTema_1.setHorizontalAlignment(SwingConstants.CENTER);
