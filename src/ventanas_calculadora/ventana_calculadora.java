@@ -1,4 +1,4 @@
-package ventana;
+package ventanas_calculadora;
 
 import java.awt.EventQueue;
 
