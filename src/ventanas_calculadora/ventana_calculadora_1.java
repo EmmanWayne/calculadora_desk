@@ -68,6 +68,7 @@ public class ventana_calculadora_1 extends JFrame {
 		final ImageIcon division = new ImageIcon(getClass().getResource("/recursos_tema_claro/dividir.png"));
 		final ImageIcon punto = new ImageIcon(getClass().getResource("/recursos_tema_claro/punto.png"));
 		final ImageIcon tema = new ImageIcon(getClass().getResource("/recursos_tema_claro/tema.png"));
+		final ImageIcon igual = new ImageIcon(getClass().getResource("/recursos_tema_claro/igual.png"));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -287,7 +288,7 @@ public class ventana_calculadora_1 extends JFrame {
 		lblIgual.setBounds(278, 346, 57, 57);
 		contentPane.add(lblIgual);
 		final ImageIcon icono_igual = new ImageIcon(
-				division.getImage().getScaledInstance(lblIgual.getWidth(), lblIgual.getHeight(), Image.SCALE_DEFAULT));
+				igual.getImage().getScaledInstance(lblIgual.getWidth(), lblIgual.getHeight(), Image.SCALE_DEFAULT));
 		lblIgual.setIcon(icono_igual);
 	}
 
