@@ -105,116 +105,58 @@ public class ventana_calculadora extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 
+		JPanel panel_principal = new JPanel();
+		panel_principal.setBorder(new BevelBorder(BevelBorder.RAISED, new Color(255, 140, 0), new Color(255, 140, 0),
+				new Color(255, 140, 0), new Color(255, 140, 0)));
+		panel_principal.setBounds(10, 71, 264, 370);
+		contentPane.add(panel_principal);
+		panel_principal.setLayout(null);
+
 		txtPantalla = new JTextField();
 		txtPantalla.setText("0.00");
 		txtPantalla.setHorizontalAlignment(SwingConstants.RIGHT);
 		txtPantalla.setEditable(false);
-		txtPantalla.setFont(new Font("Consolas", Font.PLAIN, 30));
+		txtPantalla.setFont(new Font("Cambria Math", Font.PLAIN, 25));
 		txtPantalla.setBounds(10, 11, 264, 49);
 		contentPane.add(txtPantalla);
 		txtPantalla.setColumns(10);
-		txtPantalla.setAlignmentY(BOTTOM_ALIGNMENT);
+		
 
-		JPanel panel_principal = new JPanel();
-		panel_principal.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
-		panel_principal.setBounds(10, 71, 264, 370);
-		contentPane.add(panel_principal);
-		panel_principal.setLayout(null);
-		panel_principal.setBorder(border);
+		// INICIO --------- Panel de opciones
 
-		panel_numeros = new JPanel();
-		panel_numeros.setBorder(new LineBorder(new Color(255, 140, 0), 2, true));
-		panel_numeros.setBounds(10, 153, 244, 204);
-		panel_principal.add(panel_numeros);
-		panel_numeros.setLayout(null);
+		JPanel panel_opciones = new JPanel();
+		panel_opciones.setLayout(null);
+		panel_opciones.setBorder(new LineBorder(new Color(255, 140, 0), 2, true));
+		panel_opciones.setBounds(10, 11, 244, 60);
+		panel_principal.add(panel_opciones);
 
-		lbln7 = new JLabel("");
-		lbln7.setBounds(10, 11, 52, 46);
-		panel_numeros.add(lbln7);
-		lbln7.setHorizontalAlignment(SwingConstants.CENTER);
-		final ImageIcon n7 = new ImageIcon(
-				n7b.getImage().getScaledInstance(lbln7.getWidth(), lbln7.getHeight(), Image.SCALE_DEFAULT));
-		lbln7.setIcon(n7);
+		lblEliminar = new JLabel("");
+		lblEliminar.setBounds(73, 11, 43, 38);
+		panel_opciones.add(lblEliminar);
+		lblEliminar.setHorizontalAlignment(SwingConstants.CENTER);
+		final ImageIcon eliminar = new ImageIcon(eliminar_b.getImage().getScaledInstance(lblEliminar.getWidth(),
+				lblEliminar.getHeight(), Image.SCALE_DEFAULT));
+		lblEliminar.setIcon(eliminar);
 
-		lbln8 = new JLabel("");
-		lbln8.setBounds(98, 11, 52, 46);
-		panel_numeros.add(lbln8);
-		lbln8.setHorizontalAlignment(SwingConstants.CENTER);
-		final ImageIcon n8 = new ImageIcon(
-				n8b.getImage().getScaledInstance(lbln8.getWidth(), lbln8.getHeight(), Image.SCALE_DEFAULT));
-		lbln8.setIcon(n8);
+		lblTema = new JLabel("");
+		lblTema.setBounds(10, 11, 43, 38);
+		panel_opciones.add(lblTema);
+		lblTema.setHorizontalAlignment(SwingConstants.CENTER);
+		final ImageIcon tema = new ImageIcon(
+				tema_b.getImage().getScaledInstance(lblTema.getWidth(), lblTema.getHeight(), Image.SCALE_DEFAULT));
+		lblTema.setIcon(tema);
 
-		lbln9 = new JLabel("");
-		lbln9.setBounds(182, 11, 52, 46);
-		panel_numeros.add(lbln9);
-		lbln9.setHorizontalAlignment(SwingConstants.CENTER);
-		final ImageIcon n9 = new ImageIcon(
-				n9b.getImage().getScaledInstance(lbln9.getWidth(), lbln9.getHeight(), Image.SCALE_DEFAULT));
-		lbln9.setIcon(n9);
+		lblBorrar = new JLabel("");
+		lblBorrar.setBounds(191, 11, 43, 38);
+		panel_opciones.add(lblBorrar);
+		lblBorrar.setHorizontalAlignment(SwingConstants.CENTER);
+		final ImageIcon borrar = new ImageIcon(borrar_b.getImage().getScaledInstance(lblBorrar.getWidth(),
+				lblBorrar.getHeight(), Image.SCALE_DEFAULT));
+		lblBorrar.setIcon(borrar);
 
-		lbln4 = new JLabel("");
-		lbln4.setBounds(10, 56, 52, 46);
-		panel_numeros.add(lbln4);
-		lbln4.setHorizontalAlignment(SwingConstants.CENTER);
-		final ImageIcon n4 = new ImageIcon(
-				n4b.getImage().getScaledInstance(lbln4.getWidth(), lbln4.getHeight(), Image.SCALE_DEFAULT));
-		lbln4.setIcon(n4);
+		// FINAL --------- Panel de opciones
 
-		lbln5 = new JLabel("");
-		lbln5.setBounds(98, 56, 52, 46);
-		panel_numeros.add(lbln5);
-		lbln5.setHorizontalAlignment(SwingConstants.CENTER);
-		final ImageIcon n5 = new ImageIcon(
-				n5b.getImage().getScaledInstance(lbln5.getWidth(), lbln5.getHeight(), Image.SCALE_DEFAULT));
-		lbln5.setIcon(n5);
-
-		lbln6 = new JLabel("");
-		lbln6.setBounds(182, 56, 52, 46);
-		panel_numeros.add(lbln6);
-		lbln6.setHorizontalAlignment(SwingConstants.CENTER);
-		final ImageIcon n6 = new ImageIcon(
-				n6b.getImage().getScaledInstance(lbln6.getWidth(), lbln6.getHeight(), Image.SCALE_DEFAULT));
-		lbln6.setIcon(n6);
-
-		lbln1 = new JLabel("");
-		lbln1.setBounds(10, 100, 52, 46);
-		panel_numeros.add(lbln1);
-		lbln1.setHorizontalAlignment(SwingConstants.CENTER);
-		final ImageIcon n1 = new ImageIcon(
-				n1b.getImage().getScaledInstance(lbln1.getWidth(), lbln1.getHeight(), Image.SCALE_DEFAULT));
-		lbln1.setIcon(n1);
-
-		lbln2 = new JLabel("");
-		lbln2.setBounds(98, 100, 52, 46);
-		panel_numeros.add(lbln2);
-		lbln2.setHorizontalAlignment(SwingConstants.CENTER);
-		final ImageIcon n2 = new ImageIcon(
-				n2b.getImage().getScaledInstance(lbln2.getWidth(), lbln2.getHeight(), Image.SCALE_DEFAULT));
-		lbln2.setIcon(n2);
-
-		lbln3 = new JLabel("");
-		lbln3.setBounds(182, 100, 52, 46);
-		panel_numeros.add(lbln3);
-		lbln3.setHorizontalAlignment(SwingConstants.CENTER);
-		final ImageIcon n3 = new ImageIcon(
-				n3b.getImage().getScaledInstance(lbln3.getWidth(), lbln3.getHeight(), Image.SCALE_DEFAULT));
-		lbln3.setIcon(n3);
-
-		lbln0 = new JLabel("");
-		lbln0.setBounds(98, 147, 52, 46);
-		panel_numeros.add(lbln0);
-		lbln0.setHorizontalAlignment(SwingConstants.CENTER);
-		final ImageIcon n0 = new ImageIcon(
-				n0b.getImage().getScaledInstance(lbln0.getWidth(), lbln0.getHeight(), Image.SCALE_DEFAULT));
-		lbln0.setIcon(n0);
-
-		lblPunto = new JLabel("");
-		lblPunto.setBounds(182, 147, 52, 46);
-		panel_numeros.add(lblPunto);
-		lblPunto.setHorizontalAlignment(SwingConstants.CENTER);
-		final ImageIcon punto = new ImageIcon(
-				punto_b.getImage().getScaledInstance(lblPunto.getWidth(), lblPunto.getHeight(), Image.SCALE_DEFAULT));
-		lblPunto.setIcon(punto);
+		// INICIO --------- Panel de Operaciones
 
 		panel_operaciones = new JPanel();
 		panel_operaciones.setBorder(new LineBorder(new Color(255, 140, 0), 2, true));
@@ -254,42 +196,113 @@ public class ventana_calculadora extends JFrame {
 				resta_b.getImage().getScaledInstance(lblResta.getWidth(), lblResta.getHeight(), Image.SCALE_DEFAULT));
 		lblResta.setIcon(restar);
 
-		JPanel panel_opciones = new JPanel();
-		panel_opciones.setLayout(null);
-		panel_opciones.setBorder(new LineBorder(new Color(255, 140, 0), 2, true));
-		panel_opciones.setBounds(10, 11, 244, 60);
-		panel_principal.add(panel_opciones);
+		// FINAL --------- Panel de operaciones
 
-		lblEliminar = new JLabel("");
-		lblEliminar.setBounds(73, 11, 43, 38);
-		panel_opciones.add(lblEliminar);
-		lblEliminar.setHorizontalAlignment(SwingConstants.CENTER);
-		final ImageIcon eliminar = new ImageIcon(eliminar_b.getImage().getScaledInstance(lblEliminar.getWidth(),
-				lblEliminar.getHeight(), Image.SCALE_DEFAULT));
-		lblEliminar.setIcon(eliminar);
+		// INICIO --------- Panel de numeros
 
-		lblTema = new JLabel("");
-		lblTema.setBounds(10, 11, 43, 38);
-		panel_opciones.add(lblTema);
-		lblTema.setHorizontalAlignment(SwingConstants.CENTER);
-		final ImageIcon tema = new ImageIcon(
-				tema_b.getImage().getScaledInstance(lblTema.getWidth(), lblTema.getHeight(), Image.SCALE_DEFAULT));
-		lblTema.setIcon(tema);
+		panel_numeros = new JPanel();
+		panel_numeros.setBorder(new LineBorder(new Color(255, 140, 0), 2, true));
+		panel_numeros.setBounds(10, 153, 244, 204);
+		panel_principal.add(panel_numeros);
+		panel_numeros.setLayout(null);
 
-		lblBorrar = new JLabel("");
-		lblBorrar.setBounds(191, 11, 43, 38);
-		panel_opciones.add(lblBorrar);
-		lblBorrar.setHorizontalAlignment(SwingConstants.CENTER);
-		final ImageIcon borrar = new ImageIcon(borrar_b.getImage().getScaledInstance(lblBorrar.getWidth(),
-				lblBorrar.getHeight(), Image.SCALE_DEFAULT));
-		lblBorrar.setIcon(borrar);
-		
+		lbln0 = new JLabel("");
+		lbln0.setBounds(98, 147, 52, 46);
+		panel_numeros.add(lbln0);
+		lbln0.setHorizontalAlignment(SwingConstants.CENTER);
+		final ImageIcon n0 = new ImageIcon(
+				n0b.getImage().getScaledInstance(lbln0.getWidth(), lbln0.getHeight(), Image.SCALE_DEFAULT));
+		lbln0.setIcon(n0);
+
+		lbln1 = new JLabel("");
+		lbln1.setBounds(10, 100, 52, 46);
+		panel_numeros.add(lbln1);
+		lbln1.setHorizontalAlignment(SwingConstants.CENTER);
+		final ImageIcon n1 = new ImageIcon(
+				n1b.getImage().getScaledInstance(lbln1.getWidth(), lbln1.getHeight(), Image.SCALE_DEFAULT));
+		lbln1.setIcon(n1);
+
+		lbln2 = new JLabel("");
+		lbln2.setBounds(98, 100, 52, 46);
+		panel_numeros.add(lbln2);
+		lbln2.setHorizontalAlignment(SwingConstants.CENTER);
+		final ImageIcon n2 = new ImageIcon(
+				n2b.getImage().getScaledInstance(lbln2.getWidth(), lbln2.getHeight(), Image.SCALE_DEFAULT));
+		lbln2.setIcon(n2);
+
+		lbln3 = new JLabel("");
+		lbln3.setBounds(182, 100, 52, 46);
+		panel_numeros.add(lbln3);
+		lbln3.setHorizontalAlignment(SwingConstants.CENTER);
+		final ImageIcon n3 = new ImageIcon(
+				n3b.getImage().getScaledInstance(lbln3.getWidth(), lbln3.getHeight(), Image.SCALE_DEFAULT));
+		lbln3.setIcon(n3);
+
+		lbln4 = new JLabel("");
+		lbln4.setBounds(10, 56, 52, 46);
+		panel_numeros.add(lbln4);
+		lbln4.setHorizontalAlignment(SwingConstants.CENTER);
+		final ImageIcon n4 = new ImageIcon(
+				n4b.getImage().getScaledInstance(lbln4.getWidth(), lbln4.getHeight(), Image.SCALE_DEFAULT));
+		lbln4.setIcon(n4);
+
+		lbln5 = new JLabel("");
+		lbln5.setBounds(98, 56, 52, 46);
+		panel_numeros.add(lbln5);
+		lbln5.setHorizontalAlignment(SwingConstants.CENTER);
+		final ImageIcon n5 = new ImageIcon(
+				n5b.getImage().getScaledInstance(lbln5.getWidth(), lbln5.getHeight(), Image.SCALE_DEFAULT));
+		lbln5.setIcon(n5);
+
+		lbln6 = new JLabel("");
+		lbln6.setBounds(182, 56, 52, 46);
+		panel_numeros.add(lbln6);
+		lbln6.setHorizontalAlignment(SwingConstants.CENTER);
+		final ImageIcon n6 = new ImageIcon(
+				n6b.getImage().getScaledInstance(lbln6.getWidth(), lbln6.getHeight(), Image.SCALE_DEFAULT));
+		lbln6.setIcon(n6);
+
+		lbln7 = new JLabel("");
+		lbln7.setBounds(10, 11, 52, 46);
+		panel_numeros.add(lbln7);
+		lbln7.setHorizontalAlignment(SwingConstants.CENTER);
+		final ImageIcon n7 = new ImageIcon(
+				n7b.getImage().getScaledInstance(lbln7.getWidth(), lbln7.getHeight(), Image.SCALE_DEFAULT));
+		lbln7.setIcon(n7);
+
+		lbln8 = new JLabel("");
+		lbln8.setBounds(98, 11, 52, 46);
+		panel_numeros.add(lbln8);
+		lbln8.setHorizontalAlignment(SwingConstants.CENTER);
+		final ImageIcon n8 = new ImageIcon(
+				n8b.getImage().getScaledInstance(lbln8.getWidth(), lbln8.getHeight(), Image.SCALE_DEFAULT));
+		lbln8.setIcon(n8);
+
+		lbln9 = new JLabel("");
+		lbln9.setBounds(182, 11, 52, 46);
+		panel_numeros.add(lbln9);
+		lbln9.setHorizontalAlignment(SwingConstants.CENTER);
+		final ImageIcon n9 = new ImageIcon(
+				n9b.getImage().getScaledInstance(lbln9.getWidth(), lbln9.getHeight(), Image.SCALE_DEFAULT));
+		lbln9.setIcon(n9);
+
+		lblPunto = new JLabel("");
+		lblPunto.setBounds(182, 147, 52, 46);
+		panel_numeros.add(lblPunto);
+		lblPunto.setHorizontalAlignment(SwingConstants.CENTER);
+		final ImageIcon punto = new ImageIcon(
+				punto_b.getImage().getScaledInstance(lblPunto.getWidth(), lblPunto.getHeight(), Image.SCALE_DEFAULT));
+		lblPunto.setIcon(punto);
+
+		// FINAL --------- Panel de numeros
+
 		JButton btnCalcular = new JButton("Calcular");
-		btnCalcular.setVerticalAlignment(SwingConstants.TOP);
-		btnCalcular.setBackground(new Color(255, 140, 0));
-		btnCalcular.setFont(new Font("Consolas", Font.BOLD, 30));
+		btnCalcular.setVerticalAlignment(SwingConstants.BOTTOM);
+		btnCalcular.setBackground(new Color(255, 255, 255));
+		btnCalcular.setFont(new Font("Cambria Math", Font.BOLD, 25));
 		btnCalcular.setBounds(10, 452, 264, 39);
-		btnCalcular.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		btnCalcular.setBorder(new BevelBorder(BevelBorder.RAISED, new Color(255, 140, 0), new Color(255, 140, 0),
+				new Color(255, 140, 0), new Color(255, 140, 0)));
 		contentPane.add(btnCalcular);
 	}
 
