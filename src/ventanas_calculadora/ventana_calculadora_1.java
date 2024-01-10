@@ -98,7 +98,7 @@ public class ventana_calculadora_1 extends JFrame {
 		lblEliminar.setHorizontalAlignment(SwingConstants.CENTER);
 		lblEliminar.setForeground(Color.BLACK);
 		lblEliminar.setBackground(Color.WHITE);
-		lblEliminar.setBounds(77, 74, 57, 57);
+		lblEliminar.setBounds(211, 74, 57, 57);
 		contentPane.add(lblEliminar);
 		final ImageIcon icono_eliminar = new ImageIcon(
 				eliminar.getImage().getScaledInstance(lblEliminar.getWidth(), lblEliminar.getHeight(), Image.SCALE_DEFAULT));
