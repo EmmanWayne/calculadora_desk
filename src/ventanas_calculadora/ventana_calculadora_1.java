@@ -18,6 +18,8 @@ import java.awt.Image;
 import javax.swing.JLabel;
 import javax.swing.border.SoftBevelBorder;
 import javax.swing.border.BevelBorder;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class ventana_calculadora_1 extends JFrame {
 
@@ -232,6 +234,12 @@ public class ventana_calculadora_1 extends JFrame {
 		lblPunto.setIcon(icono_punto);
 
 		lblEliminar = new JLabel("");
+		lblEliminar.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				txtPantalla.setText("");
+			}
+		});
 		lblEliminar.setBounds(10, 215, 57, 57);
 		panel.add(lblEliminar);
 		lblEliminar.setFont(new Font("Cambria Math", Font.PLAIN, 10));
@@ -287,39 +295,39 @@ public class ventana_calculadora_1 extends JFrame {
 		final ImageIcon icono_division = new ImageIcon(division.getImage().getScaledInstance(lblDivision.getWidth(),
 				lblDivision.getHeight(), Image.SCALE_DEFAULT));
 		lblDivision.setIcon(icono_division);
-		
-				lblSuma = new JLabel("");
-				lblSuma.setBounds(10, 107, 37, 37);
-				panel_2.add(lblSuma);
-				lblSuma.setFont(new Font("Cambria Math", Font.PLAIN, 10));
-				lblSuma.setHorizontalAlignment(SwingConstants.CENTER);
-				lblSuma.setForeground(Color.BLACK);
-				lblSuma.setBackground(Color.WHITE);
-				final ImageIcon icono_suma = new ImageIcon(
-						suma.getImage().getScaledInstance(lblSuma.getWidth(), lblSuma.getHeight(), Image.SCALE_DEFAULT));
-				lblSuma.setIcon(icono_suma);
-				
-						lblResta = new JLabel("");
-						lblResta.setBounds(10, 155, 37, 37);
-						panel_2.add(lblResta);
-						lblResta.setFont(new Font("Cambria Math", Font.PLAIN, 10));
-						lblResta.setHorizontalAlignment(SwingConstants.CENTER);
-						lblResta.setForeground(Color.BLACK);
-						lblResta.setBackground(Color.WHITE);
-						final ImageIcon icono_resta = new ImageIcon(
-								resta.getImage().getScaledInstance(lblResta.getWidth(), lblResta.getHeight(), Image.SCALE_DEFAULT));
-						lblResta.setIcon(icono_resta);
-						
-								lblIgual = new JLabel("");
-								lblIgual.setBounds(10, 232, 37, 37);
-								panel_2.add(lblIgual);
-								lblIgual.setFont(new Font("Cambria Math", Font.PLAIN, 10));
-								lblIgual.setHorizontalAlignment(SwingConstants.CENTER);
-								lblIgual.setForeground(Color.BLACK);
-								lblIgual.setBackground(Color.WHITE);
-								final ImageIcon icono_igual = new ImageIcon(
-										igual.getImage().getScaledInstance(lblIgual.getWidth(), lblIgual.getHeight(), Image.SCALE_DEFAULT));
-								lblIgual.setIcon(icono_igual);
+
+		lblSuma = new JLabel("");
+		lblSuma.setBounds(10, 107, 37, 37);
+		panel_2.add(lblSuma);
+		lblSuma.setFont(new Font("Cambria Math", Font.PLAIN, 10));
+		lblSuma.setHorizontalAlignment(SwingConstants.CENTER);
+		lblSuma.setForeground(Color.BLACK);
+		lblSuma.setBackground(Color.WHITE);
+		final ImageIcon icono_suma = new ImageIcon(
+				suma.getImage().getScaledInstance(lblSuma.getWidth(), lblSuma.getHeight(), Image.SCALE_DEFAULT));
+		lblSuma.setIcon(icono_suma);
+
+		lblResta = new JLabel("");
+		lblResta.setBounds(10, 155, 37, 37);
+		panel_2.add(lblResta);
+		lblResta.setFont(new Font("Cambria Math", Font.PLAIN, 10));
+		lblResta.setHorizontalAlignment(SwingConstants.CENTER);
+		lblResta.setForeground(Color.BLACK);
+		lblResta.setBackground(Color.WHITE);
+		final ImageIcon icono_resta = new ImageIcon(
+				resta.getImage().getScaledInstance(lblResta.getWidth(), lblResta.getHeight(), Image.SCALE_DEFAULT));
+		lblResta.setIcon(icono_resta);
+
+		lblIgual = new JLabel("");
+		lblIgual.setBounds(10, 232, 37, 37);
+		panel_2.add(lblIgual);
+		lblIgual.setFont(new Font("Cambria Math", Font.PLAIN, 10));
+		lblIgual.setHorizontalAlignment(SwingConstants.CENTER);
+		lblIgual.setForeground(Color.BLACK);
+		lblIgual.setBackground(Color.WHITE);
+		final ImageIcon icono_igual = new ImageIcon(
+				igual.getImage().getScaledInstance(lblIgual.getWidth(), lblIgual.getHeight(), Image.SCALE_DEFAULT));
+		lblIgual.setIcon(icono_igual);
 	}
 
 	public static void main(String[] args) {
